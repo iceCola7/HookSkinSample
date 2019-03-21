@@ -2,9 +2,9 @@ package com.cxz.skinsample.ui;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 
 import com.cxz.skinsample.R;
@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity {
     public static void verifyStoragePermissions(AppCompatActivity activity) {
         try {
             //检测是否有写的权限
-            int permission = ActivityCompat.checkSelfPermission(activity,PERMISSIONS_STORAGE[1]);
+            int permission = ActivityCompat.checkSelfPermission(activity, PERMISSIONS_STORAGE[1]);
             if (permission != PackageManager.PERMISSION_GRANTED) {
                 // 没有写的权限，去申请写的权限，会弹出对话框
                 ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);

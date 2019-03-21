@@ -1,11 +1,11 @@
 package com.cxz.skinsample.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.cxz.skinsample.R;
+import com.cxz.skinsample.base.BaseActivity;
 
-public class OtherActivity extends AppCompatActivity {
+public class OtherActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

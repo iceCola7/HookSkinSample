@@ -17,7 +17,7 @@ import java.io.File;
  * @date 2019/3/9
  * @desc
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     protected final String TAG = this.getClass().getSimpleName();
 
@@ -57,7 +57,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        Log.e(TAG, "changeTag" + null == mCurrentSkin ? "currentSkin是空" : mCurrentSkin);
+        Log.e(TAG, "changeTag：" + ((null == mCurrentSkin) ? "currentSkin是空" : mCurrentSkin));
 
         if (null != mCurrentSkin)
             changeSkin(mCurrentSkin); // 换肤操作必须在setContentView之后
